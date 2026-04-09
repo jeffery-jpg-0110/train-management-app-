@@ -1,13 +1,39 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+import java.util.ArrayList;
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+public class UseCase2TrainConsistMgmt {
+    public static void main(String[] args) {
+
+        System.out.println("======================================");
+        System.out.println("UC2 - Add Passenger Bogies to Train");
+        System.out.println("======================================\n");
+
+        // Create an ArrayList to hold passenger bogies
+        ArrayList<String> passengerBogies = new ArrayList<>();
+
+        // CREATE (Add bogies)
+        passengerBogies.add("Sleeper");
+        passengerBogies.add("AC Chair");
+        passengerBogies.add("First Class");
+
+        // Display after adding bogies
+        System.out.println("After Adding Bogies:");
+        System.out.println("Passenger Bogies : " + passengerBogies);
+
+        // REMOVE one bogie
+        passengerBogies.remove("AC Chair");
+
+        // Display after removing bogie
+        System.out.println("\nAfter Removing 'AC Chair':");
+        System.out.println("Passenger Bogies : " + passengerBogies);
+
+        // CHECK existence of a bogie
+        System.out.println("\nChecking if 'Sleeper' exists:");
+        System.out.println("Contains Sleeper? : " + passengerBogies.contains("Sleeper"));
+
+        // Final train consist
+        System.out.println("\nFinal Train Passenger Consist:");
+        System.out.println(passengerBogies);
+
+        System.out.println("\nUC2 operations completed successfully...");
     }
 }
